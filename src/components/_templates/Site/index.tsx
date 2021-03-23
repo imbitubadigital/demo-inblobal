@@ -24,7 +24,7 @@ export function TemplateSite({ children }: SiteProps) {
     <>
       <S.Container ref={refContainer}>
         <Header />
-        {children}
+        <S.Content>{children}</S.Content>
       </S.Container>
     </>
   )

@@ -3,15 +3,9 @@ import MenuItem from './MenuItem'
 import * as S from './styles'
 import { useRouter } from 'next/router'
 
-export default function Menu() {
+export default function Menu({ handleClick }) {
   const [menuActive, setMenuActive] = useState('Home')
   const router = useRouter()
-
-  const handleClick = (name: string) => {
-    console.log('foiii')
-    setMenuActive(name)
-  }
-  console.log(menuActive, menuActive)
 
   return (
     <S.Container>
@@ -20,6 +14,7 @@ export default function Menu() {
         title="Sobre"
         active={router.pathname === '/sobre'}
         link="/sobre"
+        handleClick={handleClick}
       />
       <MenuItem
         title="Equipe"
