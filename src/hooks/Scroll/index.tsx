@@ -5,13 +5,13 @@ import { ScrollContextData } from './interfaces'
 const ScrollContext = createContext<ScrollContextData>({} as ScrollContextData)
 
 const ScrollProvider: React.FC = ({ children }) => {
-  const [scrollTop, SetScrollTop] = useState(0)
+  const [scrollTop, setScrollTop] = useState(0)
 
   return (
     <ScrollContext.Provider
       value={{
         scrollTop,
-        SetScrollTop
+        setScrollTop
       }}>
       {children}
     </ScrollContext.Provider>

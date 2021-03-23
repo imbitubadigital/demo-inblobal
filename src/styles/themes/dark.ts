@@ -6,7 +6,7 @@ export default {
     text: '#D8DDCD',
     primary: '#3350B8',
     primaryLight: '#2962FF',
-    secondary: 'orange',
+    secondary: '#EAEAEA',
     backgroundReverse: '#FFFFFF',
     titleReverse: '#090B27',
     textReverse: '#151949',
