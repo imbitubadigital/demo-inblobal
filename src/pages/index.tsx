@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { TemplateSite } from '../components/_templates/Site'
+import InitialSession from '../components/InitialSession'
 import * as S from '../styles/pages/home'
 export default function Home() {
   return (
@@ -7,120 +8,7 @@ export default function Home() {
       <Head>
         <title>InGlobal Desenvolvimento</title>
       </Head>
-      <h1>Página Home</h1>
-      <p>Primeira linha de aquiii</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>Conteúdo do site</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
-      <p>outra coisaaaaaa aquiiiiiiiiiiiii</p>
+      <InitialSession />
     </TemplateSite>
   )
 }

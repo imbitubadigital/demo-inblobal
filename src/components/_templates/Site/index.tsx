@@ -1,6 +1,8 @@
 import { SiteProps } from './interfaces'
 import { Header } from '../../Header'
+
 import * as S from './styles'
+import Footer from '../../Footer'
 import { useEffect, useRef } from 'react'
 import { useScroll } from '../../../hooks/Scroll'
 
@@ -26,6 +28,7 @@ export function TemplateSite({ children }: SiteProps) {
         <Header />
         <S.Content>{children}</S.Content>
       </S.Container>
+      <Footer />
     </>
   )
 }

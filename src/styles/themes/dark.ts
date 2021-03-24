@@ -2,6 +2,7 @@ export default {
   title: 'dark',
   colors: {
     background: '#202020',
+    backgroundFooter: '#222222',
     title: '#FFFFFF',
     text: '#D8DDCD',
     primary: '#3350B8',

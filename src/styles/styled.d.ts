@@ -10,6 +10,7 @@ declare module 'styled-components' {
     title: string
     colors: {
       background: string
+      backgroundFooter: string
       title: string
       text: string
       primary: string

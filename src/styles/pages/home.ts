@@ -1,5 +1,10 @@
 import styled from 'styled-components'
-
 export const Container = styled.div`
-  margin-top: 5.5rem;
+  display: flex;
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  background: red;
 `

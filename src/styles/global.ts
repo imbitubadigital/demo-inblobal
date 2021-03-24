@@ -35,10 +35,15 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
+    font: 400 16px 'Maven Pro', sans-serif;
   }
 
   body, input, textarea, select, button {
-    font: 400 16px Roboto, sans-serif;
+    font: 400 16px 'Maven Pro', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font: 500 16px 'Maven Pro', sans-serif;
   }
 
   button{

@@ -11,6 +11,7 @@ export const Container = styled.header<HeaderProps>`
   background: ${props => props.theme.colors.background};
   height: 5.5rem;
 
+  z-index: 100;
   position: fixed;
   width: 100%;
   ${props =>
@@ -27,7 +28,10 @@ export const Content = styled.div`
   width: 100%;
   max-width: 1200px;
   padding: 0 2rem;
-  //  background: red;
+  z-index: 6000;
+`
+export const Logo = styled.img`
+  height: 40px;
 `
 
 interface NavMenuProps {
