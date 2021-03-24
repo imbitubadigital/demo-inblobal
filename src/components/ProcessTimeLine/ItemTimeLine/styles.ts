@@ -13,7 +13,6 @@ export const Container = styled.div<PositionProps>`
 export const Item = styled.div<PositionProps>`
   display: flex;
   flex-direction: ${props => (props.isLeft ? 'row' : 'row-reverse')};
-  // flex-flow: row-reverse;
   align-items: stretch;
   flex-basis: calc(50% + 70px);
 
@@ -82,6 +81,9 @@ export const BoxContent = styled.div<PositionProps>`
   background: ${props => props.theme.colors.white};
   border: 1px solid ${props => props.theme.colors.textReverse};
   border-radius: 0.25rem;
+
+  border-radius: ${props =>
+    props.isLeft ? '20px 20px 20px 0' : '20px 20px 0 20px'};
   display: flex;
   flex-direction: column;
   align-items: ${props => (props.isLeft ? 'flex-star' : 'flex-end')};
@@ -90,45 +92,16 @@ export const BoxContent = styled.div<PositionProps>`
   width: 99%;
   h3 {
     color: ${props => props.theme.colors.primary};
-    margin: 1.5rem 0;
+    margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1.1rem;
   }
   p {
     color: ${props => props.theme.colors.textCard};
+    text-align: justify;
+  }
+
+  @media (max-width: 680px) {
+    border-radius: 20px 20px 20px 0;
   }
 `
-
-/* background: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.textReverse};
-  text-align: center;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 10px 15px -15px ${props =>
-    props.theme.colors.backgroundReverse};
-  padding: 2rem; */
-
-/* h3 {
-    color: ${props => props.theme.colors.primary};
-    margin: 1.5rem 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  p {
-    color: ${props => props.theme.colors.textCard};
-  }
-`
-
-/* export const BoxIcon = styled.div`
-  background: ${props => props.theme.colors.primaryLight};
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-`
-*/

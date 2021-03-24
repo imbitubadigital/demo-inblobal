@@ -8,7 +8,7 @@ export const dataGrid = [
     id: 1,
     title: 'Desenvolvimento de aplicativos',
     content:
-      'O texto de preenchimento Lorem ipum é utilizado por designers gráficos, programadores e impressoras com o objetivo de ocupar os espaços de um site, um produto publicitário ou uma produção editorial cujo texto final ainda não está pronto.',
+      "O texto de preenchimento <b>Lorem ipum é utilizado</b> por designers gráficos, programadores e impressoras com o objetivo de ocupar os espaços de um site, um produto publicitário ou uma produção editorial cujo texto final 'ainda' não está pronto.",
     icon: FaMobileAlt
   },
   {

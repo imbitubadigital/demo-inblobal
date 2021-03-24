@@ -19,6 +19,7 @@ export const Container = styled.div`
   }
   p {
     color: ${props => props.theme.colors.textCard};
+    text-align: justify;
   }
 `
 

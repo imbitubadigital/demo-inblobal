@@ -1,11 +1,8 @@
-import { FaMobileAlt, FaRegLightbulb, FaClipboardCheck } from 'react-icons/fa'
+import { FaRegLightbulb, FaClipboardCheck } from 'react-icons/fa'
 import { BsPencilSquare, BsFileEarmarkCode } from 'react-icons/bs'
-import { AiOutlineAndroid, AiOutlineApple } from 'react-icons/ai'
-import { MdWeb, MdPublic, MdSystemUpdate } from 'react-icons/md'
-import { VscServerProcess } from 'react-icons/vsc'
+import { MdSystemUpdate, MdSettings } from 'react-icons/md'
 import { GiPencilBrush } from 'react-icons/gi'
 import { ImRocket } from 'react-icons/im'
-import { GrSettingsOption } from 'react-icons/gr'
 
 export const dataTimeline = [
   {
@@ -61,7 +58,7 @@ export const dataTimeline = [
     title: 'Manutenção',
     content:
       'Seu absurdo permite que o olho se concentre apenas no layout gráfico que objetivamente avalie as escolhas estilísticas de um projeto, por isso é instalado em muitos programas gráficos em muitas plataformas de software de publicação.',
-    icon: GrSettingsOption,
+    icon: MdSettings,
     color: '#96F550'
   },
   {
