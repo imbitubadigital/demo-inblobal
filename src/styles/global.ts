@@ -8,14 +8,15 @@ export default createGlobalStyle`
   }
 
   :root {
-  --white: #FFF;
+    --space-section: 4rem;
+    --white: #FFF;
 
-  --gray-100: #e1e1e6;
-  --gray-300: #a8a8b3;
-  --gray-900: #121214;
+    --gray-100: #e1e1e6;
+    --gray-300: #a8a8b3;
+    --gray-900: #121214;
 
-  --cyan-500: #81dafb;
-  --yellow-500: #eba417;
+    --cyan-500: #81dafb;
+    --yellow-500: #eba417;
   }
 
 

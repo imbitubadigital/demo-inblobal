@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 3rem 0;
+  padding: var(--space-section) 0;
 `
 export const Content = styled.section`
   display: flex;

@@ -13,6 +13,7 @@ declare module 'styled-components' {
       backgroundFooter: string
       title: string
       text: string
+      textCard: string
       primary: string
       primaryLight: string
       secondary: string

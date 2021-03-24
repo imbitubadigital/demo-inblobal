@@ -5,6 +5,7 @@ export default {
     backgroundFooter: '#f4f4f4',
     title: '#090B27',
     text: '#4C515C',
+    textCard: '#4C515C',
     primary: '#3350B8',
     primaryLight: '#2962FF',
     secondary: '#EAEAEA',
