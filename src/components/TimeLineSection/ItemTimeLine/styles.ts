@@ -95,6 +95,7 @@ export const BoxContent = styled.div<PositionProps>`
     margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1.1rem;
+    text-align: ${props => (props.isLeft ? 'left' : 'right')};
   }
   p {
     color: ${props => props.theme.colors.text};
@@ -105,5 +106,10 @@ export const BoxContent = styled.div<PositionProps>`
 
   @media (max-width: 680px) {
     border-radius: 20px 20px 20px 0;
+    h3 {
+      width: 100%;
+
+      text-align: left;
+    }
   }
 `

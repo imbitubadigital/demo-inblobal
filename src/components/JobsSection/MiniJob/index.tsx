@@ -1,13 +1,12 @@
 import * as S from './styles'
+import IconJob from '../../IconJob'
 import { MiniJobProps } from './interfaces'
 
-export default function MiniJob({ title, icon: Icon, color }: MiniJobProps) {
+export default function MiniJob({ title, icon, color }: MiniJobProps) {
   return (
     <S.Container>
       <button type="button">
-        <S.BoxIcon color={color}>
-          <Icon size={50} color="#fff" />
-        </S.BoxIcon>
+        <IconJob color={color} icon={icon} />
         <span>{title}</span>
       </button>
     </S.Container>

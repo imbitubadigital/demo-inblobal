@@ -17,9 +17,9 @@ export default function Menu({ handleClick }) {
         handleClick={handleClick}
       />
       <MenuItem
-        title="Equipe"
-        active={router.pathname === '/equipe'}
-        link="/equipe"
+        title="Vagas"
+        active={router.pathname === '/vagas'}
+        link="/vagas"
       />
       <MenuItem
         title="Contato"
