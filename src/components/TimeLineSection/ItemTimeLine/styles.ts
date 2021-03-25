@@ -78,8 +78,8 @@ export const Content = styled.div`
 `
 
 export const BoxContent = styled.div<PositionProps>`
-  background: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.textReverse};
+  background: ${props => props.theme.colors.backgroundCard};
+  border: 1px solid ${props => props.theme.colors.borderCard};
   border-radius: 0.25rem;
 
   border-radius: ${props =>
@@ -88,7 +88,7 @@ export const BoxContent = styled.div<PositionProps>`
   flex-direction: column;
   align-items: ${props => (props.isLeft ? 'flex-star' : 'flex-end')};
   box-shadow: 0 10px 15px -15px ${props => props.theme.colors.backgroundReverse};
-  padding: 1rem;
+  padding: 2rem;
   width: 99%;
   h3 {
     color: ${props => props.theme.colors.primary};
@@ -97,8 +97,10 @@ export const BoxContent = styled.div<PositionProps>`
     font-size: 1.1rem;
   }
   p {
-    color: ${props => props.theme.colors.textCard};
-    text-align: justify;
+    color: ${props => props.theme.colors.text};
+    text-align: left;
+    line-height: 1.4rem;
+    letter-spacing: 0.6px;
   }
 
   @media (max-width: 680px) {

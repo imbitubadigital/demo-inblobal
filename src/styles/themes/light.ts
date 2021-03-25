@@ -3,10 +3,11 @@ export default {
   colors: {
     background: '#FFFFFF',
     backgroundSecondary: '#ECF5FF',
+    backgroundCard: '#FFFFFF',
     backgroundFooter: '#f4f4f4',
     title: '#090B27',
     text: '#4C515C',
-    textCard: '#4C515C',
+    borderCard: '#D8DDCD',
     primary: '#3350B8',
     primaryLight: '#2962FF',
     secondary: '#EAEAEA',

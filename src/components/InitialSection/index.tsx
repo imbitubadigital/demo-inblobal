@@ -2,7 +2,7 @@ import * as S from './styles'
 import Button from '../../components/Button'
 import Image from 'next/image'
 import HomeImg from '../../assets/home2.png'
-export default function InitialSession() {
+export default function InitialSection() {
   return (
     <S.Container>
       <S.Content>

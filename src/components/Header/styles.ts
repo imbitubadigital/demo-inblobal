@@ -49,13 +49,15 @@ export const NavMenu = styled.nav<NavMenuProps>`
   @media (max-width: 860px) {
     background: ${props => props.theme.colors.background};
     flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
-    max-width: 400px;
+    max-width: 320px;
     left: 0;
-    top: 5.5rem;
+    top: 5.4rem;
     align-items: center;
     padding: 1rem;
-    box-shadow: 0 5px 28px rgba(0, 0, 0, 0.18);
+    /* box-shadow: 0 5px 28px rgba(0, 0, 0, 0.18); */
+    height: 100vh;
 
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
     transition: transform 0.3s ease-in-out;
@@ -64,7 +66,7 @@ export const NavMenu = styled.nav<NavMenuProps>`
       flex-direction: column;
       margin-bottom: 2rem;
       li {
-        border-bottom: 1px solid ${props => props.theme.colors.gray};
+        border-bottom: 1px solid ${props => props.theme.colors.borderCard};
         margin-bottom: 1rem;
         a {
           display: block;
@@ -74,6 +76,7 @@ export const NavMenu = styled.nav<NavMenuProps>`
 
     button {
       width: 100%;
+      font-weight: 500;
     }
   }
 `

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.textReverse};
+  background: ${props => props.theme.colors.backgroundCard};
+  border: 1px solid ${props => props.theme.colors.borderCard};
   text-align: center;
   border-radius: 0.25rem;
   display: flex;
@@ -18,8 +18,10 @@ export const Container = styled.div`
     font-size: 1.1rem;
   }
   p {
-    color: ${props => props.theme.colors.textCard};
-    text-align: justify;
+    color: ${props => props.theme.colors.text};
+    text-align: left;
+    line-height: 1.4rem;
+    letter-spacing: 0.6px;
   }
 `
 

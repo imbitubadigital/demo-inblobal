@@ -1,7 +1,7 @@
 import * as S from './styles'
 import CardGrid from './CardGrid'
 import { dataGrid } from './data'
-export default function GridServices() {
+export default function ServicesSection() {
   return (
     <S.Container>
       <S.Content>

@@ -11,10 +11,11 @@ declare module 'styled-components' {
     colors: {
       background: string
       backgroundSecondary: string
+      backgroundCard: string
       backgroundFooter: string
       title: string
       text: string
-      textCard: string
+      borderCard: string
       primary: string
       primaryLight: string
       secondary: string

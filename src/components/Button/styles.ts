@@ -7,6 +7,7 @@ export const Container = styled.button`
   font-size: 0.9rem;
   padding: 0.95rem;
   border-radius: 30px 30px 30px 0;
+  font-weight: 500;
   width: 140px;
   transition: filter 0.2s;
   &:hover {

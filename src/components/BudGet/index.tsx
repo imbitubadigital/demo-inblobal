@@ -15,21 +15,18 @@ export default function BudGet() {
           />
         </S.BoxImage>
         <S.Wellcome>
-          <h1>
-            in<span>Global</span> Desenvolvimento
-          </h1>
+          <h1>Tire sua idea do papel</h1>
           <h2>
-            Mais que uma empresa de tecnologia, somos apaixonados pelo que
-            fazemos!
+            Conte com a <strong>inGlobal</strong> para conquistar cada um dos
+            degraus dos seus objetivos!
           </h2>
 
           <p>
-            Focada em desenvolvimento mobile, a <strong>inGlobal</strong> vem se
-            destacando no mercado! Um equipe comprometida com as melhores
-            tecnologias e um time focado o tempo todo em inovação!
+            Começe agora! Faça seu orçamento e tenha acesso a um dos nossos
+            especialistas.
           </p>
 
-          <Button title="Conheça nossa história!" />
+          <Button title="Clique e faça seu orçamento!" />
         </S.Wellcome>
       </S.Content>
     </S.Container>

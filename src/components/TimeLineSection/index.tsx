@@ -1,7 +1,7 @@
 import * as S from './styles'
 import ItemTimeLine from './ItemTimeLine'
 import { dataTimeline } from './data'
-export default function ProcessTimeLine() {
+export default function TimeLineSection() {
   return (
     <S.Container>
       <S.Content>

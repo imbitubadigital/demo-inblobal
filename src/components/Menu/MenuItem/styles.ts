@@ -7,6 +7,7 @@ export const Container = styled.li<PropItem>`
   font-size: 1.05rem;
   padding-bottom: 6px;
   position: relative;
+
   transition: border-bottom 0.2s;
   color: ${props => props.active && props.theme.colors.primaryLight};
   &:hover {
