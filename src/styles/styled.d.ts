@@ -16,6 +16,7 @@ declare module 'styled-components' {
       title: string
       text: string
       borderCard: string
+      borderForm: string
       primary: string
       primaryLight: string
       secondary: string
@@ -24,6 +25,7 @@ declare module 'styled-components' {
       textReverse: string
       gray: string
       white: string
+      red: string
     }
   }
 }

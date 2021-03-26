@@ -8,19 +8,19 @@ const Input: React.FC<InputProps> = ({
   name,
   placeholderText,
   title,
-  widthLabel,
   mask,
   disabled,
+  icon: Icon,
+  type,
   ...res
 }) => {
-
   const { register, control, errors } = useFormContext()
   const error = getErrorValidator(errors, name)
   return (
-    <S.ContainerInputAndError widthLabel={widthLabel}>
-      <S.Container id={name} widthLabel={widthLabel} {...res}>
-        <S.Label htmlFor={name}>{title}</S.Label>
-
+    <S.ContainerInputAndError isError={!!error?.message}>
+      {!!title && <label htmlFor={name}>{title}</label>}
+      <S.Container isError={!!error?.message}>
+        {Icon && <Icon size={26} />}
         {mask ? (
           <Controller
             as={InputMask}
@@ -31,17 +31,17 @@ const Input: React.FC<InputProps> = ({
             defaultValue=""
             disabled={disabled}
           />
-            ) : (
-          <S.Input
+        ) : (
+          <input
             name={name}
             placeholder={placeholderText}
-            type="text"
+            type={type}
             ref={register}
             disabled={disabled}
           />
-            )}
+        )}
       </S.Container>
-      <S.Span>{error?.message}</S.Span>
+      <span>{error?.message}</span>
     </S.ContainerInputAndError>
   )
 }

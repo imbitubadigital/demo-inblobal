@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.article`
   background: ${props => props.theme.colors.backgroundCard};
   border: 1px solid ${props => props.theme.colors.borderCard};
   text-align: center;

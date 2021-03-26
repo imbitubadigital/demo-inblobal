@@ -28,15 +28,15 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error",
-        "space-before-function-paren": "off",
-        "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "generator-star-spacing": 0,
-        "multiline-ternary": [
-          "error",
-           "when-needed", { "maxExpressionLength": 40 }
+      "prettier/prettier": "error",
+      "space-before-function-paren": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "generator-star-spacing": 0,
+      "multiline-ternary": [
+        "error",
+          "never"
       ]
 
     }

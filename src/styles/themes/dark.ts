@@ -8,6 +8,7 @@ export default {
     title: '#FFFFFF',
     text: '#D8DDCD',
     borderCard: '#1a1a1a',
+    borderForm: '#1a1010',
     primary: '#3350B8',
     primaryLight: '#2962FF',
     secondary: '#EAEAEA',
@@ -15,6 +16,7 @@ export default {
     titleReverse: '#090B27',
     textReverse: '#151949',
     gray: '#EAEAEA',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    red: '#Ff0033'
   }
 }

@@ -1,82 +1,61 @@
 import styled, { css } from 'styled-components'
-
-interface InputProps {
-  widthLabel?: string
+interface InputError {
+  isError: boolean
 }
+export const ContainerInputAndError = styled.div<InputError>`
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: ${props => props.theme.colors.text};
+    font-size: 0.95rem;
+    opacity: 0.6;
+  }
 
-export const Container = styled.div<InputProps>`
-  background: #ccc;
-  height: 56px;
-  border-bottom: 1px solid blue;
-  padding: 8px 16px;
-  margin-top: 0px;
-  margin-right: 16px;
+  span {
+    color: ${props => props.theme.colors.red};
+  }
+`
+export const Container = styled.div<InputError>`
+  background: green;
+  background: ${props => props.theme.colors.backgroundCard};
+  padding: 0.5rem;
+  border: 1.5px solid ${props => props.theme.colors.borderCard};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 20px 0;
 
   ${props =>
-    props.widthLabel
-      ? css`
-          flex-basis: ${props.widthLabel};
-        `
-      : css`
-          flex-grow: 1;
-        `}
+    props.isError &&
+    css`
+      border-color: ${props => props.theme.colors.red};
+    `}
 
   input {
-    width: 100%;
-    // color: {props => props.theme.input.color};
+    color: ${props => props.theme.colors.text};
+    border: 0;
+    outline: none;
+    flex: 1;
+    font-size: 1.1.rem;
+    background: transparent;
 
     ::placeholder {
-      /* color: {props => props.theme.input.placeholder};
-      font-size: {props => props.theme.typography.regular.size};
-      font-weight: {props => props.theme.typography.regular.weight};
-      line-height: {props => props.theme.typography.regular.lineHeight}; */
-      text-transform: uppercase;
+      opacity: 0.5;
     }
   }
-`
 
-export const Label = styled.label`
-  /* color: {props => props.theme.colors.grayDarkest};
-  font-size: {props => props.theme.typography.smallRegular.size};
-  font-weight: {props => props.theme.typography.smallRegular.weight};
-  line-height: {props => props.theme.typography.smallRegular.lineHeight}; */
-  margin-bottom: 8px;
-`
+  > svg {
+    color: ${props => props.theme.colors.text};
+    margin-right: 0.5rem;
+    opacity: 0.5;
 
-export const Input = styled.input`
-  width: 100%;
-  //  color: {props => props.theme.input.color};
-
-  ::placeholder {
-    /* color: {props => props.theme.input.placeholder};
-    font-size: {props => props.theme.typography.regular.size};
-    font-weight: {props => props.theme.typography.regular.weight};
-    line-height: {props => props.theme.typography.regular.lineHeight}; */
-    text-transform: uppercase;
+    ${props =>
+      props.isError &&
+      css`
+        color: ${props => props.theme.colors.red};
+      `}
   }
-`
-
-export const Span = styled.p`
-  font-size: 11px;
-  // font-weight: {props => props.theme.typography.regular.weight};
-  line-height: 10px;
-  // height: {props => props.theme.typography.regular.lineHeight};
-  // color: {props => props.theme.colors.alertRed};
-  margin-left: 6px;
-  margin-top: 6px;
-  text-align: left;
-  text-transform: uppercase;
-`
-
-export const ContainerInputAndError = styled.div<InputProps>`
-  display: flex;
-  ${props =>
-    props.widthLabel
-      ? css`
-          flex-basis: ${props.widthLabel};
-        `
-      : css`
-          flex-grow: 1;
-        `}
-  flex-direction: column;
 `
