@@ -30,7 +30,7 @@ export const dataTimeline = [
     color: '#0182B0'
   },
   {
-    id: 5,
+    id: 4,
     title: 'Desenvolvimento',
     content:
       'O texto de preenchimento Lorem ipum é utilizado por designers gráficos, programadores e impressoras com o objetivo de ocupar os espaços de um site, um produto publicitário ou uma produção editorial cujo texto final ainda não está pronto.',
@@ -38,7 +38,7 @@ export const dataTimeline = [
     color: '#FF329D'
   },
   {
-    id: 6,
+    id: 5,
     title: 'Cobrindo Testes',
     content:
       'O texto de preenchimento Lorem ipum é utilizado por designers gráficos, programadores e impressoras com o objetivo de ocupar os espaços de um site, um produto publicitário ou uma produção editorial cujo texto final ainda não está pronto.',
@@ -46,7 +46,7 @@ export const dataTimeline = [
     color: '#eda63c'
   },
   {
-    id: 7,
+    id: 6,
     title: 'O Lançamento',
     content:
       'Para ter um resultado que está de acordo com o resultado final, os designers gráficos, designers ou tipógrafos informam o texto de Lorem ipsum em relação a dois aspectos fundamentais, a saber, a legibilidade e os requisitos editoriais.',
@@ -54,7 +54,7 @@ export const dataTimeline = [
     color: '#04558A'
   },
   {
-    id: 8,
+    id: 7,
     title: 'Manutenção',
     content:
       'Seu absurdo permite que o olho se concentre apenas no layout gráfico que objetivamente avalie as escolhas estilísticas de um projeto, por isso é instalado em muitos programas gráficos em muitas plataformas de software de publicação.',
@@ -62,7 +62,7 @@ export const dataTimeline = [
     color: '#96F550'
   },
   {
-    id: 6,
+    id: 8,
     title: 'Atualização',
     content:
       'Seu absurdo permite que o olho se concentre apenas no layout gráfico que objetivamente avalie as escolhas estilísticas de um projeto, por isso é instalado em muitos programas gráficos em muitas plataformas de software de publicação.',

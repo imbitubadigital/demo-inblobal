@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 export const Container = styled.div`
   display: flex;
   margin: 0 auto;
@@ -8,3 +8,10 @@ export const Container = styled.div`
   padding: 0 2rem;
   background: red;
 `
+interface BtnProps {
+  isLoading: boolean;
+  customWidth: number;
+  isChange: boolean;
+}
+
+
