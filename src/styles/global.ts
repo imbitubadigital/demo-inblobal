@@ -37,6 +37,19 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font: 400 16px 'Maven Pro', sans-serif;
+
+    @keyframes rotate-spinner {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .spinner{
+      animation: rotate-spinner 1s linear infinite;
+      font-size: 18px;
+    }
   }
 
   body, input, textarea, select, button {

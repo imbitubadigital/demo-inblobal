@@ -1,106 +1,64 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components'
 
-interface TeamProps {
-  isTeam?: boolean;
+interface InputError {
+  isError: boolean
 }
-
-export const Container = styled.div<TeamProps>`
-  background: #f3f3f3;
-  flex-grow: 1;
-  border-bottom: 1px solid red;
-  position: relative;
-
-  ${(props) =>
-    props.isTeam
-      ? css`
-          padding-bottom: 3px;
-          height: 46px;
-
-          & label {
-            margin-bottom: 6.5px;
-            margin-left: 4px;
-          }
-          & select {
-            margin-left: 4px;
-          }
-
-          &:after {
-            content: ' ';
-            background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzA2cHgiIGhlaWdodD0iMzA2cHgiIHZpZXdCb3g9IjAgMCAzMDYgMzA2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDYgMzA2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBvbHlnb24gcG9pbnRzPSIyNzAuMyw1OC42NSAxNTMsMTc1Ljk1IDM1LjcsNTguNjUgMCw5NC4zNSAxNTMsMjQ3LjM1IDMwNiw5NC4zNSIvPjwvZz48L3N2Zz4=');
-            background-position: bottom;
-            background-size: 50%;
-            background-repeat: no-repeat;
-            position: absolute;
-            height: 100%;
-            width: 25px;
-            top: -5px;
-            right: -2px;
-            pointer-events: none;
-          }
-        `
-      : css`
-          height: 56px;
-          padding: 8px 0;
-          padding-right: 0;
-          margin-right: 16px;
-          margin-top: 4px;
-
-          & label {
-            margin-left: 16px;
-          }
-
-          & select {
-            margin-left: 12px;
-          }
-
-          &:after {
-            content: ' ';
-            background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzA2cHgiIGhlaWdodD0iMzA2cHgiIHZpZXdCb3g9IjAgMCAzMDYgMzA2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDYgMzA2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBvbHlnb24gcG9pbnRzPSIyNzAuMyw1OC42NSAxNTMsMTc1Ljk1IDM1LjcsNTguNjUgMCw5NC4zNSAxNTMsMjQ3LjM1IDMwNiw5NC4zNSIvPjwvZz48L3N2Zz4=');
-            background-position: bottom;
-            background-size: 50%;
-            background-repeat: no-repeat;
-            position: absolute;
-            height: 100%;
-            width: 25px;
-            top: -5px;
-            right: 5px;
-            pointer-events: none;
-          }
-        `}
-`;
-
-export const Label = styled.label`
-  /* color: {(props) => props.theme.colors.grayDarkest};
-  font-size: {(props) => props.theme.typography.smallRegular.size};
-  font-weight: {(props) => props.theme.typography.smallRegular.weight};
-  line-height: {(props) => props.theme.typography.smallRegular.lineHeight}; */
-  margin-bottom: 8px;
-`;
-
-export const Select = styled.select`
-  width: 100%;
-  height: auto;
-  /* font-family: {(props) => props.theme.fontFamily};
-  font-size: {(props) => props.theme.typography.regular.size}; */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  background-color: transparent;
-
-  option {
-    text-transform: none;
-    color: purple;
+export const ContainerInputAndError = styled.div<InputError>`
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: ${props => props.theme.colors.text};
+    font-size: 0.95rem;
+    opacity: 0.6;
   }
 
-  option[value=''][disabled] {
-    display: none;
+  span {
+    color: ${props => props.theme.colors.red};
+  }
+`
+export const Container = styled.div<InputError>`
+  background: green;
+  background: ${props => props.theme.colors.backgroundCard};
+  padding: 0.5rem;
+  border: 1.5px solid ${props => props.theme.colors.borderCard};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 20px 0;
+
+  ${props =>
+    props.isError &&
+    css`
+      border-color: ${props => props.theme.colors.red};
+    `}
+
+  select {
+    color: ${props => props.theme.colors.text};
+    border: 0;
+    outline: none;
+
+    flex: 1;
+    font-size: 1.1.rem;
+    height: 1.7rem;
+    background: transparent;
+
+    ::placeholder {
+      opacity: 0.5;
+    }
   }
 
-  &:invalid {
-    text-transform: uppercase;
-    /* color: {(props) => props.theme.input.placeholder};
+  > svg {
+    color: ${props => props.theme.colors.text};
+    margin-right: 0.5rem;
+    opacity: 0.5;
 
-    font-weight: {(props) => props.theme.typography.regular.weight};
-    line-height: {(props) => props.theme.typography.regular.lineHeight}; */
+    ${props =>
+      props.isError &&
+      css`
+        color: ${props => props.theme.colors.red};
+      `}
   }
-`;
+`

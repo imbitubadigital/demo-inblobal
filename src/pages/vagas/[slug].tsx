@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { useCallback, useState } from 'react'
-import { TemplateSite } from '../components/_templates/Site'
-import * as S from '../styles/pages/contact'
-import Form from '../components/Forms/FormBase'
-import FormContact from '../components/Forms/FormContact'
-import Button from '../components/Button'
-import schemaValidateForm from '../helpers/validator/contact-validate'
+import { TemplateSite } from '../../components/_templates/Site'
+import * as S from '../../styles/pages/contact'
+import Form from '../../components/Forms/FormBase'
+import FormJob from '../../components/Forms/FormJob'
+import Button from '../../components/Button'
+import schemaValidateForm from '../../helpers/validator/contact-validate'
 export default function Home() {
   const [loading, setLoading] = useState(false)
 
@@ -23,13 +23,13 @@ export default function Home() {
   return (
     <TemplateSite>
       <Head>
-        <title>Contato | InGlobal Desenvolvimento</title>
+        <title>Vagas | Design</title>
       </Head>
       <S.Container>
         <S.Content>
           <header>
-            <h2>Fale conosco</h2>
-            <p>Preencha o formulário abaixo e fale conosco</p>
+            <h2>Faça parte do nosso time</h2>
+            <p>Preencha o formulário abaixo, inscreve-se e garanta sua vaga</p>
           </header>
           <S.ContentForm>
             <Form
@@ -37,9 +37,9 @@ export default function Home() {
               // defaultValues={{contact: contact}}
               schemaValidation={schemaValidateForm}
               modeValidation="onBlur">
-              <FormContact />
+              <FormJob />
 
-              <Button type="submit" title="Enviar" loading={loading} />
+              <Button type="submit" title="Inscrever-se" loading={loading} />
             </Form>
           </S.ContentForm>
         </S.Content>

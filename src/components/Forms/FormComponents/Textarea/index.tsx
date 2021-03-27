@@ -52,8 +52,8 @@
 
 // export default Textarea
 
-import { Controller, useFormContext } from 'react-hook-form'
-import InputMask from 'react-input-mask'
+import { useFormContext } from 'react-hook-form'
+
 import { getErrorValidator } from '../../../../helpers/utils'
 import { InputProps } from './interface'
 import * as S from './styles'

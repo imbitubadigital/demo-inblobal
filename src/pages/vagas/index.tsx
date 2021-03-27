@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { TemplateSite } from '../components/_templates/Site'
-import ListJobsSection from '../components/ListJobsSection'
+import { TemplateSite } from '../../components/_templates/Site'
+import ListJobsSection from '../../components/ListJobsSection'
 export default function Vagas() {
   return (
     <TemplateSite>
