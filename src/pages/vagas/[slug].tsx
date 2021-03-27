@@ -4,8 +4,18 @@ import { TemplateSite } from '../../components/_templates/Site'
 import * as S from '../../styles/pages/contact'
 import Form from '../../components/Forms/FormBase'
 import FormJob from '../../components/Forms/FormJob'
+
+import FormContact from '../../components/Forms/FormContact'
 import Button from '../../components/Button'
+import schemaValidateJob from '../../helpers/validator/job-validate'
 import schemaValidateForm from '../../helpers/validator/contact-validate'
+const teste = {
+  city: 'Imtibuba',
+  email: 'imbitubadigital@gmail.com',
+  name: 'aaa',
+  state: 'SP'
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(false)
 
@@ -29,13 +39,13 @@ export default function Home() {
         <S.Content>
           <header>
             <h2>Faça parte do nosso time</h2>
-            <p>Preencha o formulário abaixo, inscreve-se e garanta sua vaga</p>
+            <p>Preencha o formulário abaixo, inscreva-se e garanta sua vaga</p>
           </header>
           <S.ContentForm>
             <Form
               onSubmit={handleOnSubmit}
-              // defaultValues={{contact: contact}}
-              schemaValidation={schemaValidateForm}
+              //  defaultValues={{ job: teste }}
+              schemaValidation={schemaValidateJob}
               modeValidation="onBlur">
               <FormJob />
 

@@ -6,11 +6,12 @@ export interface OptionsInterface {
   value: number | string
 }
 
-export interface SelectProps extends SelectHTMLAttributes<HTMLScriptElement> {
+export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   name: string
   title: string
   placeholderText: string
   options?: OptionsInterface[]
   disabled?: boolean
   icon?: ComponentType<IconBaseProps>
+  loading?: boolean
 }

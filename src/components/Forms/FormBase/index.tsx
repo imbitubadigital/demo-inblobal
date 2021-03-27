@@ -1,4 +1,3 @@
-
 import { yupResolver } from '@hookform/resolvers'
 import { isEmpty } from 'lodash'
 import { useEffect } from 'react'
@@ -46,7 +45,6 @@ const FormBase: React.FC<FormProps> = ({
       <S.FormContainer noValidate onSubmit={handleOnSubmit} {...res}>
         {children}
       </S.FormContainer>
-
     </FormProvider>
   )
 }

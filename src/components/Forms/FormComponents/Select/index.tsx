@@ -1,5 +1,6 @@
 import { useFormContext } from 'react-hook-form'
 import { SelectProps } from './interfaces'
+import { ImSpinner9 } from 'react-icons/im'
 import * as S from './styles'
 import { getErrorValidator } from '../../../../helpers/utils'
 const SelectRegister: React.FC<SelectProps> = ({
@@ -8,7 +9,9 @@ const SelectRegister: React.FC<SelectProps> = ({
   placeholderText,
   options,
   disabled,
-  icon: Icon
+  icon: Icon,
+  loading,
+  ...rest
 }) => {
   const { register, errors } = useFormContext()
   const error = getErrorValidator(errors, name)
@@ -21,13 +24,19 @@ const SelectRegister: React.FC<SelectProps> = ({
     <S.ContainerInputAndError isError={!!error?.message}>
       {!!title && <label htmlFor={name}>{title}</label>}
       <S.Container isError={!!error?.message}>
-        {Icon && <Icon size={26} />}
+        {loading ? (
+          <ImSpinner9 className="spinner" size={24} />
+        ) : (
+          Icon && <Icon size={26} />
+        )}
+
         <select
           name={name}
           defaultValue=""
           ref={register}
           required
-          disabled={disabled}>
+          disabled={disabled}
+          {...rest}>
           <option value="" disabled>
             {placeholderText}
           </option>
