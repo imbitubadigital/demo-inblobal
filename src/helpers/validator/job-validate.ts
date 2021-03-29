@@ -8,7 +8,8 @@ const schemaValidateJob = validator.object().shape({
     city: validator.string().required(),
     // sexo: validator.number().nullable()
     sexo: validator.number().typeError('Informe o sexo'),
-    tec: validator.array().min(1, 'Selecione no mínimo 1 tecnologia')
+    tec: validator.array().min(1, 'Selecione no mínimo 1 tecnologia'),
+    birthday: validator.string()
     // cpf: validator.string().optional().isCpfValid(),
   })
 })

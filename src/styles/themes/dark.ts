@@ -18,5 +18,11 @@ export default {
     gray: '#EAEAEA',
     white: '#FFFFFF',
     red: '#Ff0033'
+  },
+  dataPicker: {
+    headerBackground: '#0D0808',
+    headerColor: '#D8DDCD',
+    bodyBackground: '#1E1616',
+    triangle: 'rgba(255,255,255,0.5)'
   }
 }

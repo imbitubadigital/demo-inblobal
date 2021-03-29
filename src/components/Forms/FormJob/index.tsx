@@ -2,6 +2,7 @@ import axios from 'axios'
 import Input from '../FormComponents/Input'
 import InputRadio from '../FormComponents/InputRadio'
 import InputCheckbox from '../FormComponents/InputCheckbox'
+import InputDate from '../FormComponents/InputDate'
 import { useFormContext } from 'react-hook-form'
 
 import Select from '../FormComponents/Select'
@@ -61,6 +62,7 @@ const FormJob: React.FC<FormJobProps> = ({ disabled }) => {
 
   return (
     <S.FormContainer>
+      <InputDate />
       <Input
         name="job.name"
         title="Nome"

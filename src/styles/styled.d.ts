@@ -27,5 +27,11 @@ declare module 'styled-components' {
       white: string
       red: string
     }
+    dataPicker: {
+      headerBackground: string
+      headerColor: string
+      bodyBackground: string
+      triangle: string
+    }
   }
 }
