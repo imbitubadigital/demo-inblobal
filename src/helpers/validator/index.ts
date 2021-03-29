@@ -2,10 +2,10 @@ import * as yup from 'yup'
 import validCpf from './validCpf'
 
 yup.setLocale({
-  array: {
-    max: ({ max }) => `o campo deve ter itens iguais ou inferiores a ${max}`,
-    min: ({ min }) => `campo deve ter pelo menos ${min} itens`
-  },
+  // array: {
+  //   max: ({ max }) => `o campo deve ter itens iguais ou inferiores a ${max}`,
+  //   min: ({ min }) => `campo deve ter pelo menos ${min} itens`
+  // },
   date: {
     max: ({ max }) => `a data deve ser anterior a ${max}`,
     min: ({ min }) => `a data deve ser posterior a ${min}`

@@ -1,5 +1,7 @@
 import axios from 'axios'
 import Input from '../FormComponents/Input'
+import InputRadio from '../FormComponents/InputRadio'
+import InputCheckbox from '../FormComponents/InputCheckbox'
 import { useFormContext } from 'react-hook-form'
 
 import Select from '../FormComponents/Select'
@@ -14,14 +16,18 @@ import {
   IBCityResponse
 } from './interfaces'
 import * as S from './styles'
+import { getErrorValidator } from '../../../helpers/utils'
 import { useCallback, useEffect, useState } from 'react'
+
 const FormJob: React.FC<FormJobProps> = ({ disabled }) => {
   const [loadUf, setLoadUf] = useState(false)
   const [loadCity, setLoadCity] = useState(false)
   const [ufs, setUfs] = useState<UFProps[]>([])
   const [cities, setCities] = useState<CitiesProps[]>([])
 
-  const { getValues } = useFormContext()
+  const { getValues, errors } = useFormContext()
+  const errorSexo = getErrorValidator(errors, 'job.sexo')
+  const errorCheckbox = getErrorValidator(errors, 'job.tec')
 
   useEffect(() => {
     async function loadUf(): Promise<void> {
@@ -93,6 +99,52 @@ const FormJob: React.FC<FormJobProps> = ({ disabled }) => {
         icon={ImLocation}
       />
       {/* </S.ContentRow> */}
+
+      <S.ContentRadio isErrorRadio={!!errorSexo?.message}>
+        <p>Sexo</p>
+        <div>
+          <InputRadio
+            text="Masculino"
+            name="job.sexo"
+            value={1}
+            disabled={disabled}
+          />
+          <InputRadio
+            text="Feminino"
+            name="job.sexo"
+            value={2}
+            disabled={disabled}
+          />
+          <InputRadio
+            text="Indefinido"
+            name="job.sexo"
+            value={3}
+            disabled={disabled}
+          />
+        </div>
+        <span>{errorSexo?.message}</span>
+      </S.ContentRadio>
+
+      <S.ContentCheckBox isErrorCheckbox={!!errorSexo?.message}>
+        <p>Quais tecnologias você conhece ou domina?</p>
+        <div>
+          <InputCheckbox
+            text="React"
+            name="job.tec[]"
+            //  value="Outro"
+            value="React"
+            disabled={disabled}
+          />
+          <InputCheckbox
+            text="Vue"
+            name="job.tec[]"
+            //  value="Outro"
+            value="Vue"
+            disabled={disabled}
+          />
+        </div>
+        <span>{errorCheckbox?.message}</span>
+      </S.ContentCheckBox>
     </S.FormContainer>
   )
 }

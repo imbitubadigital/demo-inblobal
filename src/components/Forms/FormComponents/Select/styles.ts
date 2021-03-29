@@ -22,7 +22,8 @@ export const ContainerInputAndError = styled.div<InputError>`
 export const Container = styled.div<InputError>`
   background: green;
   background: ${props => props.theme.colors.backgroundCard};
-  padding: 0.5rem;
+  padding: 0 0.5rem;
+  height: 3rem;
   border: 1.5px solid ${props => props.theme.colors.borderCard};
   display: flex;
   justify-content: space-between;
@@ -44,9 +45,23 @@ export const Container = styled.div<InputError>`
     font-size: 1.1.rem;
     height: 1.7rem;
     background: transparent;
+    background: ${props => props.theme.colors.backgroundCard};
 
     ::placeholder {
       opacity: 0.5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${props => props.theme.colors.text};
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: ${props => props.theme.colors.backgroundCard};
     }
   }
 

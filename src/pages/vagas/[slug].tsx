@@ -4,21 +4,22 @@ import { TemplateSite } from '../../components/_templates/Site'
 import * as S from '../../styles/pages/contact'
 import Form from '../../components/Forms/FormBase'
 import FormJob from '../../components/Forms/FormJob'
-
-import FormContact from '../../components/Forms/FormContact'
 import Button from '../../components/Button'
 import schemaValidateJob from '../../helpers/validator/job-validate'
-import schemaValidateForm from '../../helpers/validator/contact-validate'
 const teste = {
-  city: 'Imtibuba',
+  city: 'Imbituba',
   email: 'imbitubadigital@gmail.com',
-  name: 'aaa',
-  state: 'SP'
+  name: '',
+  state: '',
+  sexo: '',
+  tec: []
 }
 
 export default function Home() {
   const [loading, setLoading] = useState(false)
 
+  const [step, setStep] = useState(1)
+  const [slideType, setSlideType] = useState('slide-left')
   const [dataForm, setDataForm] = useState()
 
   const handleOnSubmit = useCallback((data: any) => {
@@ -29,6 +30,15 @@ export default function Home() {
     }, 3000)
     console.log('data do form', data)
   }, [])
+
+  function moveStep(value) {
+    if (value === 1) {
+      setSlideType('slide-right')
+    } else {
+      setSlideType('slide-left')
+    }
+    setStep(value)
+  }
 
   return (
     <TemplateSite>
@@ -41,17 +51,36 @@ export default function Home() {
             <h2>Faça parte do nosso time</h2>
             <p>Preencha o formulário abaixo, inscreva-se e garanta sua vaga</p>
           </header>
-          <S.ContentForm>
-            <Form
-              onSubmit={handleOnSubmit}
-              //  defaultValues={{ job: teste }}
-              schemaValidation={schemaValidateJob}
-              modeValidation="onBlur">
-              <FormJob />
+          {step === 1 && (
+            <S.ContentForm className={slideType}>
+              <Form
+                onSubmit={handleOnSubmit}
+                defaultValues={{ job: teste }}
+                schemaValidation={schemaValidateJob}
+                modeValidation="onBlur">
+                <h1>PARTE 01</h1>
+                <FormJob />
 
-              <Button type="submit" title="Inscrever-se" loading={loading} />
-            </Form>
-          </S.ContentForm>
+                <Button type="submit" title="Inscrever-se" loading={loading} />
+              </Form>
+            </S.ContentForm>
+          )}
+          {step === 2 && (
+            <S.ContentForm className={slideType}>
+              <Form
+                onSubmit={handleOnSubmit}
+                defaultValues={{ job: teste }}
+                schemaValidation={schemaValidateJob}
+                modeValidation="onBlur">
+                <h1>PARTE 02</h1>
+                <FormJob />
+
+                <Button type="submit" title="Inscrever-se" loading={loading} />
+              </Form>
+            </S.ContentForm>
+          )}
+          <button onClick={() => moveStep(1)}>Anterior</button>
+          <button onClick={() => moveStep(2)}>Proximo</button>
         </S.Content>
       </S.Container>
     </TemplateSite>

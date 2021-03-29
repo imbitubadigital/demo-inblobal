@@ -50,8 +50,36 @@ export default createGlobalStyle`
       animation: rotate-spinner 1s linear infinite;
       font-size: 18px;
     }
-  }
 
+    @keyframes slide-right-left {
+      from {
+        transform: translateX(300px);
+        opacity: 0;
+      } to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-left-right {
+      from {
+        transform: translateX(-300px);
+        opacity: 0;
+      } to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+    .slide-left{
+      animation: slide-right-left 600ms;
+    }
+    .slide-right{
+      animation: slide-left-right 600ms;
+    }
+
+  }
   body, input, textarea, select, button {
     font: 400 16px 'Maven Pro', sans-serif;
   }

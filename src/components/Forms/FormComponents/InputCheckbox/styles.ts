@@ -30,7 +30,6 @@ export const Input = styled.input<PropsLabel>`
 
   &:checked + label {
     &::before {
-      margin-right: 10px;
       border: 2px solid ${props => props.theme.colors.primaryLight};
       background: ${props => props.theme.colors.primaryLight};
       box-shadow: inset 0px 0px 0px 3px #eff4f7;
@@ -58,6 +57,6 @@ export const Label = styled.label`
     width: 16px;
     margin-right: 10px;
     border: 2px solid ${props => props.theme.colors.text};
-    border-radius: 10px;
+    border-radius: 2px;
   }
 `

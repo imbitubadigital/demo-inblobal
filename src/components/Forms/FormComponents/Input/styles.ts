@@ -19,14 +19,14 @@ export const ContainerInputAndError = styled.div<InputError>`
   }
 `
 export const Container = styled.div<InputError>`
-  background: green;
   background: ${props => props.theme.colors.backgroundCard};
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   border: 1.5px solid ${props => props.theme.colors.borderCard};
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px 20px 20px 0;
+  height: 3rem;
 
   ${props =>
     props.isError &&

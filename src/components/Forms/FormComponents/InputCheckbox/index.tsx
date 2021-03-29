@@ -1,7 +1,6 @@
 import { useFormContext } from 'react-hook-form'
 import { RadioObject } from './interfaces'
 import * as S from './styles'
-
 const InputRadio: React.FC<RadioObject> = ({
   name,
   text,
@@ -18,7 +17,7 @@ const InputRadio: React.FC<RadioObject> = ({
       {!isEmpty && (
         <>
           <S.Input
-            type="radio"
+            type="checkbox"
             value={value}
             name={name}
             id={`${name} ${value}`}
@@ -38,8 +37,7 @@ const InputRadio: React.FC<RadioObject> = ({
           </S.Label>
         </>
       )}
-
-      {children}
+      {/* {children} */}
     </S.Container>
   )
 }
