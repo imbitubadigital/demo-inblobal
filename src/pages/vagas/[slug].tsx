@@ -4,6 +4,7 @@ import { TemplateSite } from '../../components/_templates/Site'
 import * as S from '../../styles/pages/contact'
 import Form from '../../components/Forms/FormBase'
 import FormJob from '../../components/Forms/FormJob'
+import FormUpload from '../../components/Forms/FormUpload'
 import Button from '../../components/Button'
 import schemaValidateJob from '../../helpers/validator/job-validate'
 const teste = {
@@ -31,13 +32,19 @@ export default function Home() {
     console.log('data do form', data)
   }, [])
 
-  function moveStep(value) {
-    if (value === 1) {
-      setSlideType('slide-right')
-    } else {
-      setSlideType('slide-left')
-    }
-    setStep(value)
+  function moveStepNext() {
+    setSlideType('slide-right')
+
+    const next = step + 1 > 3 ? 3 : step + 1
+
+    setStep(next)
+  }
+  function moveStepPrev() {
+    setSlideType('slide-left')
+
+    const prev = step - 1 < 1 ? 1 : step - 1
+
+    setStep(prev)
   }
 
   return (
@@ -79,8 +86,13 @@ export default function Home() {
               </Form>
             </S.ContentForm>
           )}
-          <button onClick={() => moveStep(1)}>Anterior</button>
-          <button onClick={() => moveStep(2)}>Proximo</button>
+          {step === 3 && (
+            <S.ContentForm className={slideType}>
+              <FormUpload />
+            </S.ContentForm>
+          )}
+          <button onClick={() => moveStepPrev()}>Anterior</button>
+          <button onClick={() => moveStepNext()}>Proximo</button>
         </S.Content>
       </S.Container>
     </TemplateSite>

@@ -7,7 +7,7 @@ import { useFormContext } from 'react-hook-form'
 
 import Select from '../FormComponents/Select'
 import { FaUserCircle } from 'react-icons/fa'
-import { ImMail4, ImLocation2, ImLocation } from 'react-icons/im'
+import { ImMail4, ImLocation2, ImLocation, ImCalendar } from 'react-icons/im'
 
 import {
   FormJobProps,
@@ -62,7 +62,14 @@ const FormJob: React.FC<FormJobProps> = ({ disabled }) => {
 
   return (
     <S.FormContainer>
-      <InputDate />
+      <InputDate
+        name="job.birthday"
+        title="Data de nascimento"
+        placeholderText="Informe sua data de nascimento"
+        icon={ImCalendar}
+        initialDate={new Date()}
+        maxDate={new Date()}
+      />
       <Input
         name="job.name"
         title="Nome"

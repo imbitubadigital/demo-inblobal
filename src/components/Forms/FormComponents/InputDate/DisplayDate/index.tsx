@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-
+import * as S from './styled'
 interface InputProps {
   value: Date | string
   onClick?: () => void
@@ -7,9 +7,9 @@ interface InputProps {
 
 function DisplayDate({ value, onClick }: InputProps, ref) {
   return (
-    <button type="button" onClick={onClick} ref={ref}>
+    <S.Container type="button" onClick={onClick} ref={ref}>
       {value}
-    </button>
+    </S.Container>
   )
 }
 export default forwardRef(DisplayDate)
