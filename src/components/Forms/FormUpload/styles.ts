@@ -3,6 +3,82 @@ import styled from 'styled-components'
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+`
+
+export const ContentDrop = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  > span {
+    color: ${props => props.theme.colors.red};
+  }
+`
+
+export const BoxDrop = styled.div`
+  position: relative;
+`
+export const Drop = styled.div`
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 205px;
+  border: 3px solid ${props => props.theme.colors.text};
+  margin-bottom: 1rem;
+  border-style: dashed;
+  cursor: pointer;
+  transition: filter 0.3s;
+  background: ${props => props.theme.colors.backgroundCard};
+  cursor: pointer;
+
+  > svg {
+    color: ${props => props.theme.colors.text};
+  }
+
+  span {
+    color: ${props => props.theme.colors.text};
+    font-size: 12px;
+    display: block;
+    text-align: center;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  i {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+`
+
+export const BoxLoad = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+`
+
+export const TextLoad = styled.p`
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
 `
 
 // export const ContentRow = styled.div`

@@ -5,6 +5,7 @@ export default {
     backgroundSecondary: '#ECF5FF',
     backgroundCard: '#FFFFFF',
     backgroundFooter: '#f4f4f4',
+    backgroundTransparent: 'rgba(0,0,0,0.3)',
     title: '#090B27',
     text: '#4C515C',
     borderCard: '#D8DDCD',

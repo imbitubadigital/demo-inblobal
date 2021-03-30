@@ -33,15 +33,14 @@ export default function Home() {
   }, [])
 
   function moveStepNext() {
-    setSlideType('slide-right')
+    setSlideType('slide-left')
 
     const next = step + 1 > 3 ? 3 : step + 1
 
     setStep(next)
   }
   function moveStepPrev() {
-    setSlideType('slide-left')
-
+    setSlideType('slide-right')
     const prev = step - 1 < 1 ? 1 : step - 1
 
     setStep(prev)

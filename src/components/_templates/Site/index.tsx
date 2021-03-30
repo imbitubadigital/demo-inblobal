@@ -1,5 +1,6 @@
 import { SiteProps } from './interfaces'
 import { Header } from '../../Header'
+import ScrollTop from '../../ScrollTop'
 
 import * as S from './styles'
 import Footer from '../../Footer'
@@ -29,6 +30,7 @@ export function TemplateSite({ children }: SiteProps) {
         <S.Content>{children}</S.Content>
       </S.Container>
       <Footer />
+      <ScrollTop />
     </>
   )
 }

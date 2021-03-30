@@ -3,13 +3,24 @@ import { CardJobProps } from './interfaces'
 import IconJob from '../../IconJob'
 import Button from '../../Button'
 
-export default function CardJob({ title, color, icon, content }: CardJobProps) {
+export default function CardJob({
+  title,
+  color,
+  icon,
+  content,
+  slug,
+  onAction
+}: CardJobProps) {
   return (
     <S.Container>
       <IconJob color={color} icon={icon} />
       <h3>{title}</h3>
       <p>{content}</p>
-      <Button title="Candidatar" />
+      <Button
+        type="button"
+        title="Candidatar"
+        onAction={() => onAction(`vagas/${slug}`)}
+      />
     </S.Container>
   )
 }

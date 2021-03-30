@@ -6,4 +6,6 @@ export interface CardJobProps {
   icon: ComponentType<IconBaseProps>
   content: string
   color: string
+  slug: string
+  onAction: (url: string) => void
 }

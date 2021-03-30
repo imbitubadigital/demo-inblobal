@@ -4464,6 +4464,11 @@ react-dom@17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
+react-files@^3.0.0-alpha.1:
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-files/-/react-files-3.0.0-alpha.1.tgz#2fe4e51fd01f3c5b87d52b344aace3bb03fe12db"
+  integrity sha512-GAb3J2RhrGJIPSBnPYqGEppDgnLcaF8ok4gsND0jHkyMd14Jw1yhiTLber+uuAsifp2pfN0azA8x255EWr8zxw==
+
 react-headroom@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-headroom/-/react-headroom-3.1.0.tgz#7b176a5439cf937cc20293a49582b11f363a0498"
