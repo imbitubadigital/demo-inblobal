@@ -24,12 +24,12 @@ const Home: React.FC = () => {
       <Head>
         <title>Página Home</title>
       </Head>
-      <S.Content>
+      {/* <S.Content>
         <Image src={Logo} alt="teste" width={200} height={200} />
         <h1>Setup do Projeto</h1>
         <S.Btn onClick={loadRepo}>Ler api</S.Btn>
         <Footer />
-      </S.Content>
+      </S.Content> */}
     </S.Container>
   )
 }
