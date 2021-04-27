@@ -29,11 +29,6 @@ export default function ItemTimeLine({
           </S.BoxContent>
         </S.Content>
       </S.Item>
-      {/* <S.BoxIcon>
-        <Icon size={60} color="#fff" />
-      </S.BoxIcon>
-      <h3>{title}</h3>
-      <p>{content}</p> */}
     </S.Container>
   )
 }
